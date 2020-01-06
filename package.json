@@ -9,7 +9,7 @@
   },
   "repository": {
     "type": "git",
-    "url": git+"https://github.com/twetch-inc/react-scroll"
+    "url": "git+https://github.com/twetch-inc/react-scroll"
   },
   "keywords": [
     "react",
