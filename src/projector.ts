@@ -137,12 +137,17 @@ export class Projector {
   }
 
   public setAnchorFromCaches(scrollTop: number) {
-    const anchor = this.cachedItemRect.find(item => item ? item.bottom > scrollTop : false)
-    if (anchor) {
-      this.anchorItem = anchor
-    } else {
-      this.anchorItem = this.cachedItemRect[this.cachedItemRect.length - 1]
+    let anchor = this.cachedItemRect.find(item => item ? item.bottom > scrollTop : false)
+
+    if (!anchor) {
+      anchor = this.cachedItemRect[this.cachedItemRect.length - 1];
     }
+
+    if (!anchor) {
+      return;
+    }
+
+    this.anchorItem = anchor
   }
 
   public measure = (itemIndex: number, delta: number) => {

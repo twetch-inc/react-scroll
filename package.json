@@ -1,5 +1,5 @@
 {
-  "name": "react-iscroller",
+  "name": "@twetch/react-iscroller",
   "version": "2.0.4",
   "description": "an infinite scroll container for react",
   "main": "dist/index.js",
@@ -9,7 +9,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/huangbinjie/react-scroll.git"
+    "url": git+"https://github.com/twetch-inc/react-scroll"
   },
   "keywords": [
     "react",
@@ -20,9 +20,9 @@
   "author": "coral",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/huangbinjie/react-scroll/issues"
+    "url": "https://github.com/twetch-inc/react-scroll/issues"
   },
-  "homepage": "https://github.com/huangbinjie/react-scroll#readme",
+  "homepage": "https://github.com/twetch-inc/react-scroll/#readme",
   "devDependencies": {
     "@types/react": "^16.0.25",
     "@types/react-dom": "^16.0.3",
