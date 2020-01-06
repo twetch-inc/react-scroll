@@ -4,8 +4,7 @@
   "description": "an infinite scroll container for react",
   "main": "dist/index.js",
   "scripts": {
-    "build": "rm -fr dist && tsc",
-    "prepublish": "rm -fr dist && tsc"
+    "build": "rm -fr dist && tsc"
   },
   "repository": {
     "type": "git",
