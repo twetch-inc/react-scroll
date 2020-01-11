@@ -75,7 +75,13 @@ export class Projector {
 				this.startIndex =
 					nextAnchorItem.index >= this.bufferSize ? nextAnchorItem.index - this.bufferSize : 0;
 				this.endIndex = this.startIndex + this.displayCount - 1;
-				this.upperHeight = this.cachedItemRect[this.startIndex].top;
+				const cachedItem = this.cachedItemRect[this.startIndex];
+
+				if (!cachedItem) {
+					return;
+				}
+
+				this.upperHeight = cachedItem.top;
 				this.underHeight -= nextAnchorItem.top - this.anchorItem.top;
 				this.anchorItem = nextAnchorItem;
 				this.shouldAdjust = false;
