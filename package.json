@@ -1,6 +1,6 @@
 {
   "name": "@twetch/react-iscroller",
-  "version": "2.0.4-canary.1",
+  "version": "2.0.4-canary.2",
   "description": "an infinite scroll container for react",
   "main": "dist/index.js",
   "scripts": {
