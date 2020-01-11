@@ -42,10 +42,10 @@ export class InfiniteScroller extends React.Component<Props, State> {
   public underDom!: HTMLDivElement
   public needAdjustment = false
   public isAdjusting = false
+  public projector!: Projector
 
   private hasBottomTouched = true
   private scrollTop = 0
-  private projector!: Projector
   private width = 0
 
   /**
@@ -76,7 +76,7 @@ export class InfiniteScroller extends React.Component<Props, State> {
   public componentDidMount() {
     this.width = this.divDom.clientWidth
     const guesstimatedItemCountPerPage = Math.ceil(this.divDom.clientHeight / this.props.itemAverageHeight)
-    this.projector = new Projector(this.props.containerHeight, guesstimatedItemCountPerPage, 3, this.props.items, this.props.itemAverageHeight, this.props.cache)
+    this.projector = new Projector(this.props.containerHeight, guesstimatedItemCountPerPage, 5, this.props.items, this.props.itemAverageHeight, this.props.cache)
     this.projector.subscribe((projectedItems, upperPlaceholderHeight, underPlaceholderHeight, needAdjustment) => {
       this.needAdjustment = needAdjustment
       if (underPlaceholderHeight < this.divDom.clientHeight && !this.hasBottomTouched) {
