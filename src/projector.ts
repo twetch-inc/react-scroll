@@ -23,6 +23,7 @@ export class Projector {
 		private averageHeight: number,
 		public cachedItemRect = [] as Cache[]
 	) {
+		console.log('initial cached item rect', this.cachedItemRect);
 		this.displayCount = this.guesstimatedItemCountPerPage + this.bufferSize;
 		this.endIndex = this.startIndex + this.displayCount - 1;
 	}
